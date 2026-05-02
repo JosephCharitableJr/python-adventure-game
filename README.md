@@ -1,7 +1,7 @@
 # python-adventure-game
 rooms = {
-    "Living Room": {"north": "Kitchen", "item": "Key"},
-    "Kitchen": {"south": "Living Room", "east": "Bedroom"},
+   "Living Room": {"north": "Kitchen", "item": "Key"},
+     "Kitchen": {"south": "Living Room", "east": "Bedroom"},
     "Bedroom": {"west": "Kitchen", "item": "Sword"}
 }
 
