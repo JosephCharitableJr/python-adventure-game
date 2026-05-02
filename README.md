@@ -1,49 +1,26 @@
-# python-adventure-game
-rooms = {
-   "Living Room": {"north": "Kitchen", "item": "Key"},
-     "Kitchen": {"south": "Living Room", "east": "Bedroom"},
-    "Bedroom": {"west": "Kitchen", "item": "Sword"}
-}
-
-current_room = "Living Room"
-inventory = []
-
-while True:
-    print(f"\nYou are in the {current_room}")
-    
-    if "item" in rooms[current_room]:
-        item = rooms[current_room]["item"]
-        print(f"You see a {item}")
-    
-    move = input("Move (north/south/east/west) or 'get item': ").lower()
-    
-    if move == "get item":
-        if "item" in rooms[current_room]:
-            inventory.append(item)
-            print(f"{item} added to inventory!")
-            del rooms[current_room]["item"]
-        else:
-            print("No item here.")
-    
-    elif move in rooms[current_room]:
-        current_room = rooms[current_room][move]
-    else:
-        print("Invalid move.")
-
 # Python Adventure Game
 
 ## Description
-This is a text-based adventure game built in Python where players navigate between rooms, collect items, and explore the environment.
+This is a text-based adventure game built in Python. Players navigate between rooms, collect items, and explore the environment.
 
 ## Features
 - Room navigation system
 - Inventory management
 - Input validation
+- Interactive command-line gameplay
 
 ## Technologies Used
 - Python
 
 ## How to Run
-1. Open the file in Python
-2. Run game.py
-3. Follow the prompts in the terminal
+1. Download or clone this repository
+2. Open the folder
+3. Run:
+
+python game.py
+
+## What I Learned
+- Using dictionaries to store data
+- Loops for continuous gameplay
+- Input validation
+- Basic game logic design
