@@ -29,3 +29,21 @@ while True:
         current_room = rooms[current_room][move]
     else:
         print("Invalid move.")
+
+# Python Adventure Game
+
+## Description
+This is a text-based adventure game built in Python where players navigate between rooms, collect items, and explore the environment.
+
+## Features
+- Room navigation system
+- Inventory management
+- Input validation
+
+## Technologies Used
+- Python
+
+## How to Run
+1. Open the file in Python
+2. Run game.py
+3. Follow the prompts in the terminal
