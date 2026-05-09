@@ -1,14 +1,16 @@
 rooms = {
     "Living Room": {"north": "Kitchen", "item": "Key"},
     "Kitchen": {"south": "Living Room", "east": "Bedroom"},
-    "Bedroom": {"west": "Kitchen", "item": "Sword"}
+    "Bedroom": {"west": "Kitchen"}
 }
 
 current_room = "Living Room"
 inventory = []
 
 while True:
-    print(f"\nYou are in the {current_room}")
+    print("\n---------------------------")
+print(f"You are in the {current_room}")
+print("---------------------------")
     
     if "item" in rooms[current_room]:
         item = rooms[current_room]["item"]
@@ -28,3 +30,12 @@ while True:
         current_room = rooms[current_room][move]
     else:
         print("Invalid move.")
+        print(f"Inventory: {inventory}")
+
+if current_room == "Bedroom" and "Key" in inventory:
+    print("🎉 You unlocked the room and won the game!")
+    break
+
+if current_room == "Bedroom" and "Key" not in inventory:
+    print("❌ You entered without the key. You lose!")
+    break
