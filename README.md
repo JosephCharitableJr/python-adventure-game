@@ -24,3 +24,9 @@ python game.py
 - Loops for continuous gameplay
 - Input validation
 - Basic game logic design
+
+## Future Improvements
+- Add additional rooms
+- Add enemies or traps
+- Add score tracking
+- Improve game complexity and replayability
