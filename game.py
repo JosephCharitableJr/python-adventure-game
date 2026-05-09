@@ -9,8 +9,9 @@ inventory = []
 
 while True:
     print("\n---------------------------")
-print(f"You are in the {current_room}")
-print("---------------------------")
+    print(f"You are in the {current_room}")
+    print("---------------------------")
+    print(f"Inventory: {inventory}")
     
     if "item" in rooms[current_room]:
         item = rooms[current_room]["item"]
@@ -20,6 +21,7 @@ print("---------------------------")
     
     if move == "get item":
         if "item" in rooms[current_room]:
+            item = rooms[current_room]["item"]
             inventory.append(item)
             print(f"{item} added to inventory!")
             del rooms[current_room]["item"]
@@ -30,7 +32,6 @@ print("---------------------------")
         current_room = rooms[current_room][move]
     else:
         print("Invalid move.")
-        print(f"Inventory: {inventory}")
 
 if current_room == "Bedroom" and "Key" in inventory:
     print("🎉 You unlocked the room and won the game!")
